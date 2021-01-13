@@ -2,8 +2,6 @@ version: "3"
 services:
   hub:
     image: selenium/hub
-    ports:
-      - "4444:4444"
   chrome:
     image: selenium/node-chrome
     shm_size: '1gb'
@@ -31,4 +29,4 @@ services:
       - HUB_HOST=hub
       - MODULE=testng.xml
     volumes:
-      - ./bookFlight-result:/home/DockerImageFolder/test-output
+      - ./output/bookFlight-result:/home/DockerImageFolder/test-output
